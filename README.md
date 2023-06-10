@@ -1,6 +1,6 @@
 # chat-bot  
 
-_本项目基础源自https://github.com/leon-fong/ChatGPT-miniprogram，对该项目做了功能上的裁剪，只保留了最简单的调用ChatGPT聊天功能并且改为使用typescript_
+_本项目基础源自[https://github.com/leon-fong/ChatGPT-miniprogram](https://github.com/leon-fong/ChatGPT-miniprogram)，对该项目做了功能上的裁剪，只保留了最简单的调用ChatGPT聊天功能并且改为使用typescript_
 
 ## 安装
 
