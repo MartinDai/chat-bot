@@ -1,0 +1,16 @@
+{
+  "name": "chat-bot",
+  "version": "1.0.0",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tdesign-miniprogram": "^1.1.8"
+  },
+  "devDependencies": {
+    "miniprogram-api-typings": "^3.10.0"
+  },
+  "main": ".eslintrc.js",
+  "description": ""
+}

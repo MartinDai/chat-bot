@@ -1,0 +1,19 @@
+{
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f4f5f5",
+    "navigationBarTitleText": "ChatBot",
+    "navigationBarTextStyle": "black"
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "resolveAlias": {
+    "~/*": "/*"
+  },
+  "usingComponents": {
+    "custom-loading": "/components/custom-loading/index"
+  },
+  "sitemapLocation": "sitemap.json",
+  "pages": [
+    "pages/home/index"
+  ]
+}

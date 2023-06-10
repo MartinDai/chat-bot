@@ -1,0 +1,37 @@
+<view class="chat">
+	<t-navbar>
+		<view slot='title' class="navbar__title">
+			<t-avatar image="/assets/images/prompt-{{currentPrompt.title || 'default'}}.svg" size="60rpx" />
+			<text>{{currentPrompt.name}}</text>
+		</view>
+	</t-navbar>
+	<scroll-view scroll-y="{{true}}" style="height:calc(100% - {{contentHeight}}px)" scroll-with-animation="{{true}}" class="content" id="message" scroll-into-view="item-{{currentItem}}">
+		<view class="content__gutter--top"></view>
+		<message-item role="assistant">
+			<text>{{currentPrompt.description}}</text>
+		</message-item>
+		<view wx:for="{{messageList}}" wx:key="id" id="item-{{item.id}}">
+			<message-item data-index="{{index}}" role="{{item.role}}" content="{{item.content}}" finished="{{item.finished}}" />
+		</view>
+		<message-item role="assistant" id="item-loading" wx:if="{{thinking}}">
+			<div class="bubble">
+				<div class="bubble__circle"></div>
+				<div class="bubble__circle"></div>
+				<div class="bubble__circle"></div>
+			</div>
+		</message-item>
+		<view id="item-bottom" class="content__gutter--bottom"></view>
+	</scroll-view>
+	<view class="footer" id="footer" style="bottom: {{fixedTop}}px">
+		<view class="footer__content">
+			<button wx:if="{{thinking}}" class="btn-clear footer__content--clear" bindtap="handleCancel">
+				<t-icon name="close-circle" size="50rpx" color="#C55348" />
+			</button>
+			<button wx:else class="btn-clear footer__content--clear" bindtap="handleClear">
+				<t-icon name="clear" size="50rpx" />
+			</button>
+			<t-input value="{{inputValue}}" t-class="t-input-padding-class" maxlength="{{200}}" confirm-type="send" disabled="{{loading || thinking}}" disableDefaultPadding="{{true}}" show-confirm-bar="{{false}}" adjust-position="{{false}}" clearable bind:keyboardheightchange="handleKeyboardHeightChange" bind:change="handleValueChange" bind:enter="handleSendClick" />
+		</view>
+	</view>
+	<view class="footer__safe-area"></view>
+</view>

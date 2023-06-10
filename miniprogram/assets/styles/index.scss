@@ -1,0 +1,38 @@
+@import '/assets/styles/tdesign-variables.wxss';
+
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Segoe UI, Arial, Roboto, 'PingFang SC',
+    'miui', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+  font-size: 28rpx;
+  font-weight: 300;
+  color: #031c24;
+  background-color: #f4f5f5;
+}
+
+/* scroll-view滚动条样式 */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.safeAreaInsetBottom {
+  padding-bottom: calc(env(safe-area-inset-bottom));
+}
+
+.btn-clear {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: inherit;
+	font-weight: inherit;
+	color: inherit;
+	text-align: inherit;
+	text-decoration: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+.btn-clear::after,
+.btn-clear::before {
+	border: none;
+}
